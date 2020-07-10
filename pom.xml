@@ -3,15 +3,16 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.cpulover.springdemo</groupId>
-	<artifactId>spring-crm-rest</artifactId>
+	<artifactId>crm-rest-service</artifactId>
 	<version>1.0.0</version>
 	<packaging>war</packaging>
 
 	<properties>
-		<springframework.version>5.0.6.RELEASE</springframework.version>
-		<hibernate.version>5.4.1.Final</hibernate.version>
-		<mysql.connector.version>5.1.45</mysql.connector.version>
+		<springframework.version>5.2.6.RELEASE</springframework.version>
+		<hibernate.version>5.4.10.Final</hibernate.version>
+		<mysql.connector.version>8.0.16</mysql.connector.version>
 		<c3po.version>0.9.5.2</c3po.version>
+
 
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
@@ -97,7 +98,7 @@
 
 	<build>
 
-		<finalName>spring-crm-rest</finalName>
+		<finalName>crm-rest-service</finalName>
 
 		<plugins>
 
