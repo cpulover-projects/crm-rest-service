@@ -17,16 +17,20 @@ public class CustomerRestController {
 
 	@Autowired
 	CustomerService customerService;
-	
-	//define endpoint for "/api/customers" - return list of customers
+
+	// define endpoint for "/api/customers" - return list of customers
 	@GetMapping("/customers")
-	public List<Customer> getCustomers(){
+	public List<Customer> getCustomers() {
 		return customerService.getCustomers();
 	}
-	
-	//define endpoint for "/api/customers/{id}" - return customer by id
-		@GetMapping("/customers/{id}")
-		public Customer getCustomer(@PathVariable int id){
-			return customerService.getCustomer(id);
+
+	// define endpoint for "/api/customers/{id}" - return customer by id
+	@GetMapping("/customers/{id}")
+	public Customer getCustomer(@PathVariable int id) {
+		Customer customer = customerService.getCustomer(id);
+		if (customer == null) {
+			throw new CustomerNotFoundException("Customer id not found - " + id);
 		}
+		return customer;
+	}
 }
