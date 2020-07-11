@@ -1,4 +1,14 @@
 # Customer Relationships Management RESTful API
+## Endpoints
+- GET ```/api/customers```: get list of customers
+- POST ```/api/customers```: add a new customer
+- POST ```/api/customers-multiples```: add multiple customers
+- PUT ```/api/customers```: update an existing customer (include id in request body)
+- PUT ```/api/customers/{id}```: update an existing customer (not include id in request body)
+- DELETE ```/api/customers/{id}```: delete a customer
+
+---
+
 ## Notes
 - *__@PostMapping:__* add new entity
 - *__@PutMapping:__* update existing entity
